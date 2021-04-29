@@ -1,0 +1,66 @@
+mothod A
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) 
+    {
+        if(n==2||n==1)
+        {
+            return true;
+        }
+        int k=2;
+        
+        while(pow(2,k)<=n)
+        {
+            if(pow(2,k)==n)
+            {
+                return true;
+            }
+            k++;
+        }
+        return false;
+        
+    }
+};
+
+
+
+method B
+
+if the count of set bit ==1 then power of 2
+
+
+method C
+
+floor and ceil equal hona  chahiye
+
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) 
+    {
+//         if(n==2||n==1)
+//         {
+//             return true;
+//         }
+//         int k=2;
+        
+//         while(pow(2,k)<=n)
+//         {
+//             if(pow(2,k)==n)
+//             {
+//                 return true;
+//             }
+//             k++;
+//         }
+//         return false;
+        
+        if(n==0)
+        {
+            return false;
+        }
+        
+        return floor(log2(n))==ceil(log2(n));
+        
+    }
+};
